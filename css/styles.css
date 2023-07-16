@@ -1,0 +1,220 @@
+/***************************/
+/*        General          */
+/***************************/
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fcfcfc;
+  font-size: 1.2rem;
+}
+
+img {
+  width: 100%;
+}
+
+.main-header,
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/***************************/
+/*        Header          */
+/***************************/
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.headline {
+  font-size: 1.2em;
+  text-align: center;
+  padding: 20px;
+  text-transform: uppercase;
+  color: #626262;
+}
+
+.searchBar {
+  padding: 5px 20px;
+  width: 80%;
+}
+
+/***************************/
+/*    Employee Container   */
+/***************************/
+
+.member-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border: 1px solid #b1b4ba;
+  justify-items: center;
+  align-items: center;
+  padding: 10px;
+  margin: 15px;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.member-container:hover {
+  transition: 0.3s;
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+.member-image,
+.member-info {
+  justify-self: self-start;
+}
+
+.member-image .profile-picture {
+  border-radius: 50%;
+}
+
+.member-info {
+  font-size: 0.8em;
+}
+
+.member-email,
+.member-city {
+  color: blue;
+  padding: 5px 0px;
+}
+
+/***************************/
+/*         Modal           */
+/***************************/
+
+.modal-container {
+  background-color: rgba(000, 000, 000, 0.8);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.modal {
+  border-radius: 5px;
+  opacity: 1;
+  background-color: white;
+  position: absolute;
+  width: 350px;
+  height: 450px;
+  left: 50%;
+  height: 50%;
+  z-index: 500;
+  transform: translate(-50%, 30%);
+  text-align: center;
+  padding: 30px 20px;
+  border: 1px solid #778;
+}
+
+.modal-btn {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  padding: 10px;
+}
+
+.modal-image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 20px 0px;
+}
+
+.modal-email,
+.modal-city,
+.modal-main {
+  color: #778;
+}
+
+.modal-email,
+.modal-city {
+  padding: 5px 0px;
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+.modal-main {
+  margin-top: 30px;
+  font-size: 0.8em;
+}
+
+.modal-address {
+  padding: 20px 0px;
+}
+
+.hidden {
+  display: none;
+}
+
+.left-arrow,
+.right-arrow {
+  position: absolute;
+  color: #778;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+.left-arrow {
+  left: 5%;
+  top: 40%;
+}
+
+.right-arrow {
+  right: 5%;
+  top: 40%;
+}
+/***************************/
+/*      Media Queries      */
+/***************************/
+
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-header {
+    flex-direction: row;
+  }
+
+  .headline {
+    font-size: 1em;
+    margin-right: auto;
+  }
+
+  .searchBar {
+    width: 30%;
+    margin-right: 25px;
+  }
+
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .member-container:hover {
+    transform: scale(0.9);
+    transition: 0.3s;
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  }
+}

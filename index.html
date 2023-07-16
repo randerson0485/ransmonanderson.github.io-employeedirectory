@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Employee Directory</title>
+  </head>
+  <body>
+    <!--Header-->
+    <header class="main-header">
+      <h1 class="headline">Employee Directory</h1>
+      <input
+        type="text"
+        class="searchBar"
+        name="search"
+        id="searchField"
+        placeholder="Search..."
+      />
+    </header>
+    <!--Main-->
+    <main>
+      <div class="container" id="employee-sheet"></div>
+    </main>
+    <!--Modal-->
+    <div class="modal-container hidden" id="employee-modal">
+      <div class="modal">
+        <button id="modal-close" class="modal-btn">X</button>
+        <div class="modal-content"></div>
+        <p id="leftArrow" class="left-arrow">&lt</p>
+        <p id="rightArrow" class="right-arrow">></p>
+      </div>
+    </div>
+    <!--JavaScript-->
+    <script src="js/app.js"></script>
+  </body>
+</html>
